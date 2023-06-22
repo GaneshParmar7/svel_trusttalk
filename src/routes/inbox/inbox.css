@@ -1,0 +1,19 @@
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 500px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+	.ellipsis {
+		width: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+	.ellipsis {
+		width: 100px;
+	}
+}

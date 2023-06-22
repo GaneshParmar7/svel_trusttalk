@@ -1,0 +1,387 @@
+.tt-message-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tt-message-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('https://trusttalk.net/assets/img/trusttalk-bg.png');
+	filter: blur(10px);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	pointer-events: none;
+	height: 100%;
+}
+
+.tt-senders-profile-container {
+	position: relative;
+	display: flex;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.405);
+	border-radius: 10px;
+	margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+	.tt-senders-profile-container {
+		margin: 0;
+	}
+}
+
+.tt-senders-profile-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: blur(20px);
+}
+
+.tt-message-inner-container {
+	display: grid;
+	grid-template-rows: auto 1fr auto auto;
+	height: calc(100vh - 15vh);
+	width: 60%;
+}
+
+@media (max-width: 1200px) {
+	.tt-message-inner-container {
+		width: 75%;
+	}
+}
+
+@media (max-width: 768px) {
+	.tt-message-inner-container {
+		width: 100%;
+	}
+}
+
+.tt-message-window {
+	min-width: 75%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	flex-direction: column-reverse;
+	display: flex;
+}
+
+.tt-message-window::-webkit-scrollbar {
+	display: none;
+}
+
+.tt-textarea-container {
+	display: flex;
+	width: 75%;
+	min-width: 100%;
+	gap: 10px;
+	margin-top: 5px;
+}
+
+.tt-textarea {
+	border: none;
+	display: flex;
+	align-self: center;
+	justify-self: center;
+	height: 6vh;
+	max-height: 20vh;
+	overflow-y: hidden;
+	border-radius: 10px;
+	resize: none;
+	align-items: center;
+}
+.tt-textarea:focus {
+	outline: none;
+}
+.tt-textarea:active {
+	outline: none;
+}
+
+@media (min-width: 1000) {
+	.tt-textarea {
+		padding: 13px !important;
+	}
+}
+
+.attachmentImg {
+	padding: 0;
+	margin: 0;
+	color: rgb(65, 65, 65);
+	background: transparent;
+	background-color: transparent;
+	position: absolute;
+	border: none;
+	cursor: pointer;
+	right: 10px;
+}
+
+@media (max-width: 768px) {
+	.attachmentImg {
+		top: 50%;
+		right: 10px;
+	}
+}
+
+.closeBtn {
+	display: flex;
+	justify-self: end;
+	border-radius: 50%;
+	border: none;
+	height: 2rem;
+	width: 2rem;
+	font-size: 1rem;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	color: #f4623a;
+	cursor: pointer;
+}
+
+.closeBtn:hover {
+	background-color: #f4623a;
+	color: white;
+}
+
+textarea:focus::placeholder {
+	color: transparent;
+}
+
+.tt-send-button {
+	min-height: 1em;
+	font-weight: 500;
+	font-size: 0.9rem;
+	font-family: sans-serif;
+	background-color: white;
+	color: #f4623a;
+	padding: 0 10px;
+	height: 100%;
+	max-width: 30rem;
+	display: flex;
+	justify-content: center;
+	border-radius: 16px;
+	align-self: center;
+	text-align: center;
+}
+
+.tt-send-button:hover {
+	background-color: #f4623a;
+}
+
+.bx--btn--primary:hover {
+	background-color: #f4623a !important;
+}
+
+.bx--overflow-menu {
+	height: 100%;
+}
+.bx--overflow-menu.bx--overflow-menu--open:hover {
+	background-color: transparent;
+}
+
+.bx--overflow-menu:hover {
+	background-color: transparent;
+}
+
+.tt-dropdown-button {
+	min-height: 2em;
+	height: 100% !important;
+	font-weight: 500;
+	font-size: 0.9rem;
+	font-family: sans-serif;
+	background-color: white;
+	color: #f4623a;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	border-radius: 16px;
+	align-self: center;
+	text-align: center;
+}
+
+.tt-dropdown-button:hover {
+	background-color: #f4623a;
+}
+
+.tt-senders-photo {
+	border-radius: 10%;
+	align-self: left;
+	width: 100px;
+	height: 100px;
+}
+
+@media (max-width: 768px) {
+	.tt-senders-photo {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.tt-senders-photo {
+		width: 70px;
+		height: 70px;
+	}
+}
+
+.tt-text-black-50 {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.fa-brands {
+	color: chocolate;
+	padding: 1px;
+}
+
+.tt-senders-profile {
+	align-items: center;
+	justify-content: left;
+	display: flex;
+	gap: 20px;
+	position: relative;
+	/* flex-direction: column; */
+}
+
+.tt-message {
+	width: 75%;
+	font-weight: 500;
+	font-size: 0.85rem;
+	color: rgb(40, 40, 40);
+	background-color: white;
+	padding: 20px;
+	border-radius: 11px;
+	position: relative;
+	margin: 10px;
+	font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu, Cantarell,
+		Fira Sans, sans-serif;
+}
+
+@media (max-width: 768px) {
+	.tt-message {
+		padding: 20px;
+	}
+}
+
+.attachment-content {
+	margin-top: 10px;
+}
+
+.carousel-content {
+	height: 100%;
+}
+
+.tt-carousel-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tt-carousel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tt-carousel-photo {
+	border-radius: 10%;
+	width: 500px;
+	height: 500px;
+}
+
+@media (max-width: 768px) {
+	.tt-carousel-photo {
+		border-radius: 10%;
+		width: 200px;
+		height: 200px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.tt-carousel-photo {
+		border-radius: 10%;
+		width: 300px;
+		height: 300px;
+	}
+}
+
+.icons {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	column-gap: 3px;
+	row-gap: 22px;
+	cursor: pointer;
+}
+
+.tt-menu-container {
+	display: flex;
+	justify-content: center;
+}
+
+.tt-user-menu {
+	/* filter: blur(5px); */
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.tt-menuBtn {
+	font-weight: 100;
+	font-size: 0.8rem;
+	font-family: sans-serif;
+	background-color: white;
+	color: #f4623a;
+	border: none;
+	cursor: pointer;
+}
+
+.tt-menuBtn:hover {
+	background-color: #f4623a;
+	color: white;
+}
+
+.tt-inbox {
+	font-weight: 100;
+	font-size: 0.8rem;
+	padding: 10px;
+	font-family: sans-serif;
+	background-color: #f4623a;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.tt-inbox:hover {
+	background-color: white;
+	color: #f4623a;
+}
+
+.tt-flex-100 {
+	flex: 100%;
+}
+
+.tt-nav-bar {
+	background-color: white;
+	border: none;
+	color: #f4623a;
+}
+
+.tt-menu-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	column-gap: 10px;
+	gap: 4em;
+}
+.tt-menu-switcher {
+	margin-bottom: 10px;
+}
+/* .tt-menu-switcher
+.tt-menu-content */
